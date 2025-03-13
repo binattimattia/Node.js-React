@@ -1,18 +1,29 @@
 import './App.css'
-import Title from "./components/Title.tsx";
-import Buttons from "./components/Buttons.tsx";
 import {NavBar_base, NavBar_avanzata} from "./components/Navbar.tsx";
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
 
 function App() {
     return (
     <>
-        <div><NavBar_avanzata></NavBar_avanzata></div>
-        <div><NavBar_base></NavBar_base></div>
-      <div>
-        <Title />
-      </div>
-        <div><Buttons></Buttons></div>
-    </>
+   <Router>
+   <NavBar_avanzata />
+       <NavBar_base></NavBar_base>
+   <div>
+       <Routes>
+   <Route path="/" element={<Home />} />
+    <Route path="/about" element={<About />} />
+    <Route path="/services" element={<Services />} />
+    <Route path="/contact" element={<Contact />} />
+       </ Routes>
+    </div>
+    </Router>
+
+
+</>
   )
 }
 
