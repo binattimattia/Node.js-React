@@ -11,7 +11,7 @@ function App() {
     <>
    <Router>
    <NavBar_avanzata />
-       <NavBar_base></NavBar_base>
+       <NavBar_base title={"React + Vite"}></NavBar_base>
    <div>
        <Routes>
    <Route path="/" element={<Home />} />
@@ -21,8 +21,6 @@ function App() {
        </ Routes>
     </div>
     </Router>
-
-
 </>
   )
 }

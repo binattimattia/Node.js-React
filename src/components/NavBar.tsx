@@ -1,7 +1,11 @@
 import * as React from "react";
 import { Link } from 'react-router-dom';
 
-export const NavBar_base: React.FC = () => {
+interface NavBar_base {
+    title: string;
+}
+
+export const NavBar_base: React.FC<NavBar_base> = (props) => {
     return (
         <div>
             <nav className="navbar">
@@ -9,7 +13,7 @@ export const NavBar_base: React.FC = () => {
                     <a className="navbar-brand" href="#">
                         <img src="/src/assets/react.svg" alt="Logo" width="30" height="24"
                              className="d-inline-block align-text-top"/>
-                        React + Vite
+                        {props.title}
                     </a>
                 </div>
             </nav>

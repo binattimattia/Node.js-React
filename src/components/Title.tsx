@@ -1,9 +1,14 @@
+import * as React from "react";
 
-export const Title = () => {
+interface Title {
+    title: string
+    paragraph: string
+}
+export const Title: React.FC<Title> = (props) => {
     return (
         <div>
-            <h1>La mia prima app con React!</h1>
-            <p>Home della mia prima app</p>
+            <h1>{props.title}</h1>
+            <p className={"lead"}>{props.paragraph}</p>
         </div>
     );
 };

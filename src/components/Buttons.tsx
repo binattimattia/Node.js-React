@@ -1,5 +1,10 @@
+import * as React from "react";
 
-export const Buttons = () => {
+interface Buttons {
+    button: string;
+}
+
+export const Buttons: React.FC<Buttons> = (props) => {
     const greetings = () => {
         const name = prompt("What's your name? ");
         if (name) {
@@ -8,7 +13,7 @@ export const Buttons = () => {
     return (
         <div>
             <button className="btn btn-primary" onClick={greetings}>
-                Click me!
+                {props.button}
             </button>
         </div>
     )
