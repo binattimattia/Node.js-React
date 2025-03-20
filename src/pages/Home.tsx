@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import ListComponent from "../components/ListComponent.tsx";
 import styles from "../styles/Home.module.css"; 
 
-export const Home = () => {
+const Home = () => {
     const [lists, setLists] = useState<string[]>([]);
     const [newListText, setNewListText] = useState("");
 
@@ -13,6 +13,10 @@ export const Home = () => {
             setLists([...lists, newListText]);
             setNewListText("");
         }
+    };
+
+    const removeList = (index: number) => {
+        setLists(lists.filter((_, i) => i !== index));
     };
 
     return (
@@ -42,6 +46,12 @@ export const Home = () => {
                             {lists.map((list, index) => (
                                 <li key={index} className={styles.listItem}>
                                     <ListComponent listName={list} />
+                                    <button 
+                                        onClick={() => removeList(index)}
+                                        className={styles.removeButton}
+                                    >
+                                        Rimuovi la lista
+                                    </button>
                                 </li>
                             ))}
                         </ul>
