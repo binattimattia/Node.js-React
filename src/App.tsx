@@ -14,14 +14,14 @@ function App() {
        <NavBar_base title={"React + Vite"}></NavBar_base>
    <div>
        <Routes>
-   <Route path="/" element={<Home />} />
+    <Route path="/" element={<Home />} />
     <Route path="/about" element={<About />} />
     <Route path="/services" element={<Services />} />
     <Route path="/contact" element={<Contact />} />
        </ Routes>
     </div>
     </Router>
-</>
+    </>
   )
 }
 
