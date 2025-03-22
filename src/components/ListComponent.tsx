@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "../styles/ListComponent.module.css"; 
 
 export const ListComponent = ({ listName }: { listName: string }) => {
     const [items, setItems] = useState<string[]>([]);
@@ -16,12 +17,13 @@ export const ListComponent = ({ listName }: { listName: string }) => {
         <h2>{listName}</h2>
         <div>
           <input
+            className={styles.input}
             type="text"
             value={newItem}
             onChange={(e) => setNewItem(e.target.value)}
             placeholder="Aggiungi un elemento"
           />
-          <button onClick={addItem}>Aggiungi Elemento</button>
+          <button onClick={addItem} className={styles.button}>Aggiungi Elemento</button>
         </div>
         <ul>
           {items.map((item, index) => (

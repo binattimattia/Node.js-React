@@ -1,5 +1,5 @@
 import './App.css'
-import {NavBar_base, NavBar_avanzata} from "./components/Navbar.tsx";
+import {NavBar_avanzata} from "./components/Navbar.tsx";
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -11,7 +11,6 @@ function App() {
     <>
    <Router>
    <NavBar_avanzata />
-       <NavBar_base title={"React + Vite"}></NavBar_base>
    <div>
        <Routes>
     <Route path="/" element={<Home />} />
