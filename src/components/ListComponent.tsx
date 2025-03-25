@@ -30,7 +30,7 @@ export const ListComponent = ({ listName }: { listName: string }) => {
           />
           <button onClick={addItem} className={styles.button}>Aggiungi Elemento</button>
         </div>
-        <ul className={listItem}>
+        <ul className={styles.listItem}>
           {items.map((item, index) => (
             <li key={index} className={styles.listItem}>
               {item}
