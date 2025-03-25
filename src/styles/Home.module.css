@@ -67,10 +67,15 @@
 
 .listItem {
   background-color: #ffffff;
-  padding: 20px;
+  padding: 30px;
   margin-bottom: 10px;
   border: 1px solid #ced4da;
-  border-radius: 4px;
+  border-radius: 8px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 .removeButton {
@@ -80,7 +85,9 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 15px;
+  width: 150px;
+  font-size: 14px;
 }
 
 .removeButton:hover {

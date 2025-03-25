@@ -57,3 +57,20 @@
     border-color: #555;
     box-shadow: 0 0 6px rgba(85, 85, 85, 0.2);
 }
+
+.listItem {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.removeX {
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .removeX:hover {
+    color: darkred;
+  }

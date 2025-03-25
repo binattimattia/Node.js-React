@@ -4,16 +4,21 @@ import styles from "../styles/ListComponent.module.css";
 export const ListComponent = ({ listName }: { listName: string }) => {
     const [items, setItems] = useState<string[]>([]);
     const [newItem, setNewItem] = useState("");
-  
+
     const addItem = () => {
       if (newItem.trim()) {
         setItems([...items, newItem]);
         setNewItem("");
       }
     };
-  
+
+    const removeItem = (index: number) => {
+      const updatedItems = items.filter((_, i) => i !== index);
+      setItems(updatedItems);
+    };
+
     return (
-      <div className="list">
+      <div>
         <h2>{listName}</h2>
         <div>
           <input
@@ -25,12 +30,21 @@ export const ListComponent = ({ listName }: { listName: string }) => {
           />
           <button onClick={addItem} className={styles.button}>Aggiungi Elemento</button>
         </div>
-        <ul>
+        <ul className={listItem}>
           {items.map((item, index) => (
-            <li key={index}>{item}</li>
+            <li key={index} className={styles.listItem}>
+              {item}
+              <span 
+                onClick={() => removeItem(index)} 
+                className={styles.removeX}
+              >
+              &times;
+              </span>
+            </li>
           ))}
         </ul>
       </div>
     );
-  };
-export default ListComponent
+};
+
+export default ListComponent;
