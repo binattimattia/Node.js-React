@@ -46,14 +46,14 @@ const Home = () => {
 
   return (
     <div className={styles.container}>
-      <Title title={"Crea la tua lista della spesa!"} paragraph={"Clicca 'aggiungi lista' per creare una nuova lista"} />
+      <Title title={"Pianifica. Agisci. Realizza."} paragraph={"Un app per la gestione smart del tuo tempo"} />
 
       <div className={styles.inputContainer}>
         <input
           type="text"
           value={newListText}
           onChange={(e) => setNewListText(e.target.value)}
-          placeholder="Aggiungi una nuova lista"
+          placeholder="Crea una To-do list"
           className={styles.inputField}
         />
         <button onClick={addList} className={styles.button}>

@@ -27,7 +27,7 @@ export const ListComponent = ({ listName, items, addItem, removeItem }: ListComp
           type="text"
           value={newItem}
           onChange={(e) => setNewItem(e.target.value)}
-          placeholder="Aggiungi un elemento"
+          placeholder="|"
         />
         <button onClick={handleAddItem} className={styles.button}>Aggiungi Elemento</button>
       </div>
