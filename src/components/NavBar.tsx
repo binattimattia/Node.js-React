@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Link } from 'react-router-dom';
+import { FaTrashAlt } from 'react-icons/fa';
 
 interface NavBar_base {
     title: string;
@@ -39,6 +40,9 @@ export const NavBar_avanzata = () => {
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/contact">Contact</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/trash"><FaTrashAlt /></Link>
                         </li>
                     </ul>
                 </div>
